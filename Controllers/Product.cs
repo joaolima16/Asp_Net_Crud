@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using api.Models;
 using api.Repository;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace api.Controllers
 {
@@ -16,24 +17,75 @@ namespace api.Controllers
 
         public Product(IProduct productInterface) => _IProduct = productInterface;
 
-
-        [HttpPost]
-        public ActionResult AddProduct([FromBody] ProductModel product)
+        [HttpGet]
+        public IActionResult listProducts()
         {
-            _IProduct.addProduct(product);
-            return Ok(product);
+            try
+            {
+                return Ok(_IProduct.products());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Ocorreu algum erro: " + ex.Message);
+            }
+
         }
 
         [HttpGet("{Name?}")]
-        public List<ProductModel> listProducts(string? Name)
+        public IActionResult listProduct(string Name)
         {
-            List<ProductModel> product = new List<ProductModel>();
 
-            if(Name.Length > 1){
-                Console.Write("passei aqui");
+            if (_IProduct.product(Name).Any())
+            {
+                
+                return Ok(_IProduct.product(Name));
             }
-            return product = _IProduct.products();
+            else
+            {
+                return NotFound("Não foi possivel encontrar o produto");
+            }
 
+        }
+        [HttpPost]
+        public ActionResult AddProduct([FromBody] ProductModel product)
+        {
+            try
+            {
+                _IProduct.addProduct(product);
+                return Ok(product);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Ocorreu algum erro: " + ex.Message);
+            }
+
+        }
+        [HttpPut("{Name}")]
+        public IActionResult UpdateProduct(string Name, [FromBody] ProductModel product)
+        {
+            try
+            {
+                _IProduct.updateProduct(Name, product);
+                return Ok(product);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Ocorreu um erro: " + ex.Message);
+            }
+        }
+        [HttpDelete("{Name}")]
+        public IActionResult deleteProduct(string Name)
+        {
+            try
+            {
+                _IProduct.deleteProduct(Name);
+                return Ok("Produto deletado");
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Ocorreu um erro:" + ex.Message);
+            }
         }
     }
 }

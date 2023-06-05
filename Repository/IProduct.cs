@@ -10,6 +10,9 @@ namespace api.Repository
     {
         ProductModel addProduct(ProductModel product);
         List<ProductModel> products();
-        List<ProductModel> product(String name);
+        List<ProductModel> product(string name);
+        ProductModel updateProduct(string name, ProductModel product);
+        ProductModel deleteProduct(string name);
+
     }
 }

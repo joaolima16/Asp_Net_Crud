@@ -28,8 +28,26 @@ namespace api.Repository
 
         public List<ProductModel> product(string name)
         {
-            Console.Write("passei aqui");
             return _DataContext.product.Where(p => p.Name == name).ToList();
+        }
+
+        public ProductModel updateProduct(string name,ProductModel product)
+        {
+            var _product = _DataContext.product.FirstOrDefault(p => p.Name == name);
+            _product.Name = product.Name;
+            _product.Value = product.Value;
+            _DataContext.SaveChanges();
+            return _product;
+
+        }
+
+        public ProductModel deleteProduct(string name)
+        {
+            var _product = _DataContext.product.First(p => p.Name == name);
+            _DataContext.product.Remove(_product);
+            _DataContext.SaveChanges();
+            return _product;
+
         }
     }
 }
