@@ -11,9 +11,11 @@ namespace api.Data
     {
         public DataContext(DbContextOptions<DataContext> options): base(options){}
         public DbSet<ProductModel> product {get;set;}
+        public DbSet<UserModel> user {get;set;}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProductModel>().ToTable("produto");
+            modelBuilder.Entity<UserModel>().ToTable("usuario");
         }
     }
 }

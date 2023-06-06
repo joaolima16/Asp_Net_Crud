@@ -6,6 +6,7 @@ using api.Models;
 using api.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authorization;
 
 namespace api.Controllers
 {
@@ -16,7 +17,7 @@ namespace api.Controllers
         private IProduct _IProduct;
 
         public Product(IProduct productInterface) => _IProduct = productInterface;
-
+        [Authorize]
         [HttpGet]
         public IActionResult listProducts()
         {
