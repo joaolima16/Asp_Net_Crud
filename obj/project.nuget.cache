@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kk5K9wrNwI/9ZdssabiPeApti4RzrQEJgQNHyeqm40oXve5Djx6ygDUbOYoSJwvNvqi9ejjGhDBop2C9kS64lA==",
+  "dgSpecHash": "F5fLnxiNLU0MF0vn4nsXIhWWesDyPWCeXIdjLNT8CFR49+SCOLF+rwTTbrxQFw6xtUnahWk92nqG75Ewmg0Ijw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj",
+  "projectFilePath": "C:\\Users\\joão vitor\\Downloads\\Asp_Net_Crud-main (1)\\Asp_Net_Crud-main\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joão vitor\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.5\\microsoft.aspnetcore.authentication.jwtbearer.7.0.5.nupkg.sha512",
     "C:\\Users\\joão vitor\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",

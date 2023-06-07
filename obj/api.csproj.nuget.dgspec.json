@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj": {}
+    "C:\\Users\\joão vitor\\Downloads\\Asp_Net_Crud-main (1)\\Asp_Net_Crud-main\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj": {
+    "C:\\Users\\joão vitor\\Downloads\\Asp_Net_Crud-main (1)\\Asp_Net_Crud-main\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\joão vitor\\Downloads\\Asp_Net_Crud-main (1)\\Asp_Net_Crud-main\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj",
+        "projectPath": "C:\\Users\\joão vitor\\Downloads\\Asp_Net_Crud-main (1)\\Asp_Net_Crud-main\\api.csproj",
         "packagesPath": "C:\\Users\\joão vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joão vitor\\Desktop\\api\\obj\\",
+        "outputPath": "C:\\Users\\joão vitor\\Downloads\\Asp_Net_Crud-main (1)\\Asp_Net_Crud-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joão vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",

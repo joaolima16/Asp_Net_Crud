@@ -14,8 +14,10 @@ namespace api.Data
         public DbSet<UserModel> user {get;set;}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder); 
             modelBuilder.Entity<ProductModel>().ToTable("produto");
-            modelBuilder.Entity<UserModel>().ToTable("usuario");
+             modelBuilder.Entity<UserModel>().ToTable("usuario");
+             
         }
     }
 }
