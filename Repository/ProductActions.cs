@@ -18,9 +18,6 @@ namespace api.Repository
             _DataContext.SaveChanges();
             return product;  
         }
-
-
-
         public List<ProductModel> products()
         {
                 return _DataContext.product.ToList();

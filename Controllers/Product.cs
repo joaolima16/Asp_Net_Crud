@@ -17,7 +17,7 @@ namespace api.Controllers
         private IProduct _IProduct;
 
         public Product(IProduct productInterface) => _IProduct = productInterface;
-        [Authorize]
+
         [HttpGet]
         public IActionResult listProducts()
         {
