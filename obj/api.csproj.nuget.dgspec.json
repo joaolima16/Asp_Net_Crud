@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj": {}
+    "C:\\Users\\João e Bruno\\Downloads\\Asp_Net_Crud-main\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj": {
+    "C:\\Users\\João e Bruno\\Downloads\\Asp_Net_Crud-main\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\João e Bruno\\Downloads\\Asp_Net_Crud-main\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\joão vitor\\Desktop\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\joão vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joão vitor\\Desktop\\api\\obj\\",
+        "projectPath": "C:\\Users\\João e Bruno\\Downloads\\Asp_Net_Crud-main\\api.csproj",
+        "packagesPath": "C:\\Users\\João e Bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\João e Bruno\\Downloads\\Asp_Net_Crud-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\joão vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\João e Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -90,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

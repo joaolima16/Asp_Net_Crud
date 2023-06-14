@@ -43,7 +43,7 @@ namespace api.Repository
             }
           
         }
-
+     
         public Boolean userExists(UserModel user)
         {
             try
