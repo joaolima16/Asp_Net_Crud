@@ -6,6 +6,7 @@ using api.Data;
 using api.Models;
 using api.Repository;
 using api.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
@@ -29,10 +30,8 @@ namespace api.Controllers
             {
                 return Ok(tokenGenerator.GenerateToken(user.Email));
             }
-            else
-            {
-                return BadRequest("Login invalido");
-            }
+            return BadRequest("Login invalido");
+
         }
         [HttpPost]
         public IActionResult AddUser([FromBody] UserModel user)
@@ -47,6 +46,21 @@ namespace api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [Authorize(Roles = "admin")]
+        [HttpPut("{Id?}")]
+        public IActionResult updateUser(int id, UserModel user)
+        {
+            try
+            {
+                _IUser.updateUser(id, user);
+                return Ok($"Usuário com id: {id} foi atualizado");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+        [Authorize]
         [HttpDelete("{id?}")]
         public IActionResult deleteUser(int id)
         {
@@ -59,8 +73,9 @@ namespace api.Controllers
             {
                 Console.WriteLine(ex.Message);
                 return BadRequest("Ocorreu um erro ao deletar o usuário");
-                
+
             }
+
         }
     }
 }

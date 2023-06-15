@@ -10,6 +10,7 @@ namespace api.Repository
     {
         UserModel addUser (UserModel user);
         Boolean userExists(UserModel user);
+        UserModel updateUser(int id, UserModel user);
         UserModel deleteUser(int id);
     }
 }

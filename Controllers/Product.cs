@@ -17,7 +17,7 @@ namespace api.Controllers
         private IProduct _IProduct;
 
         public Product(IProduct productInterface) => _IProduct = productInterface;
-        
+
         [HttpGet]
         public IActionResult listProducts()
         {
@@ -62,7 +62,6 @@ namespace api.Controllers
             }
 
         }
-
         [Authorize]
         [HttpPut("{Name}")]
         public IActionResult UpdateProduct(string Name, [FromBody] ProductModel product)
@@ -70,14 +69,13 @@ namespace api.Controllers
             try
             {
                 _IProduct.updateProduct(Name, product);
-                return Ok(product);
+                return Ok($"Produto com nome ${Name} atualizado ");
             }
             catch (Exception ex)
             {
                 return BadRequest("Ocorreu um erro: " + ex.Message);
             }
         }
-
         [Authorize]
         [HttpDelete("{Name}")]
         public IActionResult deleteProduct(string Name)

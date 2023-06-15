@@ -31,19 +31,21 @@ namespace api.Repository
 
         public UserModel deleteUser(int id)
         {
-            try{
+            try
+            {
                 UserModel _user = _DataContext.User.Find(id);
                 _DataContext.User.Remove(_user);
                 _DataContext.SaveChanges();
                 return _user;
             }
-            catch(DbException ex){
+            catch (DbException ex)
+            {
                 Console.WriteLine(ex);
                 return null;
             }
-          
+
         }
-     
+
         public Boolean userExists(UserModel user)
         {
             try
@@ -53,16 +55,29 @@ namespace api.Repository
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
             catch (DbException ex)
             {
                 Console.Write(ex.Message);
             }
             return false;
+        }
+        public UserModel updateUser(int id, UserModel user)
+        {
+            try
+            {
+                var _user = _DataContext.User.FirstOrDefault(s => s.Id == id);
+                _user.Email = user.Email;
+                _user.Password = user.Password;
+                _DataContext.SaveChanges();
+                return user; 
+            }
+            catch (DbException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
         }
     }
 }

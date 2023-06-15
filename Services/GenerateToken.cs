@@ -14,6 +14,8 @@ namespace api.Services
     public string GenerateToken(string pass){
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(Key.Secret);
+
+        var claim =  new Claim(ClaimTypes.Name,"admin");
         var tokenDescriptor = new SecurityTokenDescriptor{
             Subject = new System.Security.Claims.ClaimsIdentity(new [] {new Claim(ClaimTypes.Name, pass)}),
             Expires = DateTime.UtcNow.AddMinutes(3),
